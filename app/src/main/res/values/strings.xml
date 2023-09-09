@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Weatherapp_kotlin</string>
+    <string name="apiKey">da4ac805394d40513df743f7317f96aa</string>
 </resources>
