@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        getCurrentWeather()
+        //getCurrentWeather()
     }
 
     //this function to pass data to the retrofit instance

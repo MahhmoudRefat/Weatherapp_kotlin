@@ -56,12 +56,12 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
 
     //picasso
-    implementation ("com.squareup.picasso:picasso:2.8")
+    //implementation ("com.squareup.picasso:picasso:2.8")
 
     //barchart
-    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+   // implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     //location
-    implementation ("com.google.android.gms:play-services-location:21.0.1")
+    //implementation ("com.google.android.gms:play-services-location:21.0.1")
 
 }
