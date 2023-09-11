@@ -8,5 +8,7 @@ object RetrofitInstance {
 
     val api : ApiInterface by lazy {
         Retrofit.Builder().baseUrl(Util.Base).addConverterFactory(GsonConverterFactory.create()).build().create(ApiInterface::class.java)
+        //باخد اوبجكت من الرتروفيت
+        //addConverterFactory ده الى بيحول السريل من الداتا ل اوبجكت
     }
 }

@@ -14,4 +14,8 @@ interface ApiInterface {
         @Query("units") units : String ,
         @Query("appid") apiKey : String ,
     ):Response<CurrentWeather>
+
+    //ممكن استخدم ال call back function
+    //ولاكن ال courtine احسن انى استخدمل ال Response وبتكون suspend function
+    //Response<CurrentWeather     بتجيب كل اليوزر الى عندى
 }

@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        // البايندينج عشان مكتبش ال find view by id
         //getCurrentWeather()
     }
-
     //this function to pass data to the retrofit instance
     private fun getCurrentWeather() {
+        //Dispatchers.IO عشان هتعاملم ع حاجة جاية من ع الانتر نت
         GlobalScope.launch ( Dispatchers.IO ){
             val response = try {
                 //we will pass the quieries
