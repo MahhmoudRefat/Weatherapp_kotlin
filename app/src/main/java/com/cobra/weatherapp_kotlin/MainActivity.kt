@@ -8,6 +8,7 @@ import com.cobra.weatherapp_kotlin.databinding.ActivityMainBinding
 import com.cobra.weatherapp_kotlin.utils.RetrofitInstance
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
@@ -49,10 +50,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-    fun printTextAfterDElay(mytext:String){
-        Thread.sleep(3000)
-        Log.d("my func ", mytext )
     }
 
 }
