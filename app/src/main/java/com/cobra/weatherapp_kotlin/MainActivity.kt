@@ -2,6 +2,7 @@ package com.cobra.weatherapp_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import com.cobra.weatherapp_kotlin.databinding.ActivityMainBinding
 import com.cobra.weatherapp_kotlin.utils.RetrofitInstance
@@ -48,6 +49,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+    fun printTextAfterDElay(mytext:String){
+        Thread.sleep(3000)
+        Log.d("my func ", mytext )
     }
 
 }
