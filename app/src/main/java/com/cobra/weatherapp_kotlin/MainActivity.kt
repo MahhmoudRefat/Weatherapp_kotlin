@@ -53,4 +53,25 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+/*
+    GlobalScope.launch {
+            printTextAfterDelay("aly1")
+            printTextAfterDelay("aly2")
+
+        }
+/*
+    runBlocking {
+        printTextAfterDelay("mahmoud")
+    }*/
+
+    }
+    suspend fun printTextAfterDelay(mytext:String) =
+        GlobalScope.launch(Dispatchers.IO) {
+            delay(2000)
+        //    withContext(Dispatchers.Main){ myTextView.text=mytext}
+
+
+
+    }
+* */
 
