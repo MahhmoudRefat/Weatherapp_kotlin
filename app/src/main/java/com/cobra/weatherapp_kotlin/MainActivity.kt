@@ -8,6 +8,7 @@ import com.cobra.weatherapp_kotlin.databinding.ActivityMainBinding
 import com.cobra.weatherapp_kotlin.utils.RetrofitInstance
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -51,7 +52,19 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    val jop: Job = GlobalScope.launch {
+        launch { getUserFromNetwork() }
+        launch { getUserFromDatabase() }
+    }
+    private suspend fun getUserFromNetwork(): String {
+        delay(2000)
+        return "aly"
+    }
 
+    private suspend fun getUserFromDatabase(): String {
+        delay(2000)
+        return "aly"
+    }
 }
 
 
