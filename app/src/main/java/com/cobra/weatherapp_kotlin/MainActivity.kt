@@ -52,19 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    val jop: Job = GlobalScope.launch {
-        launch { getUserFromNetwork() }
-        launch { getUserFromDatabase() }
-    }
-    private suspend fun getUserFromNetwork(): String {
-        delay(2000)
-        return "aly"
-    }
 
-    private suspend fun getUserFromDatabase(): String {
-        delay(2000)
-        return "aly"
-    }
 }
 
 
