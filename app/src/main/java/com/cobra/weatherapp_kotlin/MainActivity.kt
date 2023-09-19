@@ -11,6 +11,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -29,22 +31,16 @@ class MainActivity : AppCompatActivity() {
         // البايندينج عشان مكتبش ال find view by id
         //getCurrentWeather()
 
-        val KotlinChannel = Channel<String>()
-        val charlist = arrayOf("A", "B", "C", "D")
-
         runBlocking {
-            launch {
-                for (char in charlist){
-                    KotlinChannel.send(char)
-                    delay(1000)
+            flow<Int> {
+                for (i in 1..10) {
+                    emit(i)
+                    Log.d("here", i.toString())
                 }
-            }
-            launch {
-                for(char in KotlinChannel){
-                    Log.d("here" , char)
-                }
-            }
+            }.filter { i -> i < 5 } //intermediate
+                .collect {}
         }
+
     }
     //this function to pass data to the retrofit instance
     private fun getCurrentWeather() {
